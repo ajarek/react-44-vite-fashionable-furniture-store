@@ -1,0 +1,16 @@
+.button{
+  padding:1rem 2rem ;
+  background-color: #ab7a5f;
+  color: aliceblue;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover{
+  transform:translateX(4px) translateY(4px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+  background-color: #8a6753;
+}

@@ -5,6 +5,7 @@ import About from './pages/About/About'
 import Products from './pages/Products/Products'
 import Cart from './pages/Cart/Cart'
 import Login from './pages/Login/Login'
+import Logout from './pages/Logout/Logout'
 function App() {
   return (
     <div className='App'>
@@ -32,6 +33,10 @@ function App() {
         <Route
           path='/login/'
           element={<Login />}
+        />
+        <Route
+          path='/logout/'
+          element={<Logout />}
         />
       </Routes>
     </div>
