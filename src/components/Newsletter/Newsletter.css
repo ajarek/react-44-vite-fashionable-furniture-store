@@ -1,0 +1,46 @@
+.newsletter{
+  width: 100%;
+  padding: 2rem 1rem ;
+}
+.newsletter h3{
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.newsletter .content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items: center;
+}
+.newsletter .content p{
+  line-height: 2;
+  letter-spacing: 1px;
+  color: gray;
+}
+.newsletter .content .contact-form{
+  display: flex;
+  align-items: center;
+}
+.newsletter .content .contact-form input{
+ width: 360px;
+ height: 40px;
+ border-bottom-left-radius: 5px;
+ border-top-left-radius: 5px;
+ border: 1px solid #000;
+ padding: 0 1rem;
+ border-right: none;
+}
+.newsletter .content .contact-form .submit-btn{
+  height: 40px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #000;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  background-color:#ab7a5f ;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.newsletter .content .contact-form .submit-btn:hover{
+  background-color:#ca7c52 ;
+}
