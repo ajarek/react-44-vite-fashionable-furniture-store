@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Button} from '../../components/Button/Button'
 import './FeaturedProducts.css'
 
 const FeaturedProducts = () => {
@@ -12,15 +13,26 @@ const FeaturedProducts = () => {
  
 })
   return (
-    <div>
+    <div className='root'>
       <h1>Featured Products</h1>
+      <hr />
+      <div className="wrapper-featured">
       {isData?.map((el)=>{
          if(el.id<=2)
         return(
-         
-        <p key={el.id}>{el.name}</p>
+         <div key={el.id}>
+         <img src={'/images/'+el.src} alt={el.name} />
+        <p>{el.name}</p>
+        <p>{'$'+el.price}</p>
+        </div>
         )
       })}
+      </div>
+      <Button
+      path={'/products/'}
+      >
+        ALL PRODUCTS
+        </Button>
       </div>
   )
 }

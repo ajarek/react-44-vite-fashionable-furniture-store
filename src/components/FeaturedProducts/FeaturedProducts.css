@@ -1,0 +1,36 @@
+.root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f5f8;
+  padding-bottom: 2rem;
+}
+.root h1{
+  margin: 2rem 0;
+}
+.root hr{
+  width: 10%;
+  height: 4px;
+  background-color:#b48484 ;
+}
+.wrapper-featured{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 1rem;
+  place-items: center;
+  padding: 2rem 0;
+  
+}
+.wrapper-featured img{
+  width: 360px;
+  object-fit: cover;
+}
+.wrapper-featured p{
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+.wrapper-featured p:nth-child(3){
+  color:#b48484 ;
+}
