@@ -1,4 +1,5 @@
 import Navigation from './components/Navigation/Navigation'
+import Footer from './components/Footer/Footer'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
@@ -39,6 +40,7 @@ function App() {
           element={<Logout />}
         />
       </Routes>
+      <Footer/>
     </div>
   )
 }

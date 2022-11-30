@@ -1,0 +1,34 @@
+.about-root{
+  width: 100%;
+
+}
+.about-root .header{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  background-color:#eaded7 ;
+  gap: 1rem;
+}
+.about-root .wrapper-about{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items: center;
+  padding: 2rem;
+}
+.about-root .wrapper-about .about-left{
+}
+.about-root .wrapper-about .about-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+
+
+}
+.about-root .wrapper-about .about-right p{
+line-height: 2;
+color: gray;
+}
