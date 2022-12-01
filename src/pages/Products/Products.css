@@ -1,6 +1,6 @@
 .products-root{
   width: 100%;
-
+  margin-bottom: 2rem;
 }
 .products-root .header{
   width: 100%;
@@ -10,16 +10,84 @@
   justify-content: flex-start;
   padding: 0 2rem;
   background-color:#eaded7 ;
-  gap: 1rem;
 }
 .products-root .wrapper-products{
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  place-items: center;
+  grid-template-columns: 1fr 4fr;
+  
+  padding:0 2rem;
+}
+
+.products-left{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 2rem;
 }
-.products-panel{
-  width: 100%;display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+.products-h4{
+  margin: 1rem 0;
+  letter-spacing: 1px;
+}
+.products-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.products-buttons button{
+  border: none;
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.products-buttons button:focus{
+  border-bottom: 1px solid ;
+}
+.products-colors{
+  display: flex;
+  align-items: center;
+}
+.products-colors button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.products-colors .all{
+  border-radius:0 ;
+  font-size: 1.2rem;
+}
+.products-colors .red{
+  background-color: red;
+}
+.products-colors .green{
+  background-color: green;
+}
+.products-colors .blue{
+  background-color: blue;
+}
+.products-colors .black{
+  background-color: black;
+}
+.products-colors button:focus{
+  transform: scale(1.1);
+}
+.products-price p {
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+}
+.products-shipping{
+  display: flex;
+  align-items: center;
+}
+.products-shipping p{
+  margin-right: 1rem;
+  margin-bottom: 1.2rem;
+}
+.products-shipping input{
+  width: 20px;
+  height: 20px;
 }

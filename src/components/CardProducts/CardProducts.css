@@ -4,11 +4,10 @@
   grid-template-columns: repeat(3 ,1fr);
   gap: 1rem;
   place-items: center;
-  padding: 2rem 0;
-  
+  cursor: pointer;
 }
 .wrapper-featured img{
-  width: 360px;
+  
   object-fit: cover;
 }
 .wrapper-featured p{

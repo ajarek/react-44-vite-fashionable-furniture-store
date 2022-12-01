@@ -8,6 +8,7 @@
   box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 1rem 0;
 }
 .button:hover{
   transform:translateX(4px) translateY(4px);

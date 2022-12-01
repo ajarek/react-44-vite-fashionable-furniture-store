@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
     <div className='root'>
       <h1>Featured Products</h1>
       <hr />
-      <CardProducts length={2} />
+      <CardProducts length={2} width={'360px'} />
       <Button path={'/products/'}>ALL PRODUCTS</Button>
       
     </div>

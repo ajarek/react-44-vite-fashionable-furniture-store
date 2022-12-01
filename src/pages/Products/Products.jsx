@@ -1,39 +1,69 @@
 import React from 'react'
+import ProductsPanel from '../../components/ProductsPanel/ProductsPanel'
+import CardProducts from '../../components/CardProducts/CardProducts'
 import './Products.css'
+import Button from '../../components/Button/Button'
 const Products = () => {
   return (
     <div className='products-root'>
       <div className='header'>
         <h1>Home / Products</h1>
-       
       </div>
-      <div className='products-panel'>
-          <div className='products-input'>
-            <input
-              type='search'
-              name=''
-              id=''
+      <ProductsPanel length={23} />
+      <div className='wrapper-products'>
+        <div className='products-left'>
+          <h4 className='products-h4'>Category</h4>
+          <div className='products-buttons'>
+            <button>All</button>
+            <button>Office</button>
+            <button>Living Room</button>
+            <button>Kitchen</button>
+            <button>Bedroom</button>
+            <button>Dining</button>
+            <button>Kids</button>
+          </div>
+          <form className='panel-sort'>
+            <h4 className='products-h4'>Company</h4>
+            <select className='select-sort'>
+              <option
+                value='all'
+                selected
+              >
+                all
+              </option>
+              <option value='furniture'>furniture</option>
+              <option value='Ikea'>ikea</option>
+              <option value='Agata'>agata</option>
+            </select>
+          </form>
+          <h4 className='products-h4'>Colors</h4>
+          <div className='products-colors'>
+            
+            <button className='all'>all</button>
+            <button className='red'></button>
+            <button className='green'></button>
+            <button className='blue'></button>
+            <button className='black'></button>
+          </div>
+          <h4 className='products-h4'>Price</h4>
+          <div className="products-price">
+            <p>$<span>300</span></p>
+            <input type="range" name="" id="" value={300} min={0} max={700} />
+          </div>
+          <div className="products-shipping">
+            <p>Free Shipping</p>
+            <input type="checkbox" name="" id="" checked/>
+          </div>
+          <div className="clear">
+            <Button
+            children={'Clear Filters'}
+            path={'/'}
             />
           </div>
-          <div className='products-button'>
-            <button>🪟</button>
-            <button>📰</button>
-          </div>
-          <div className="products-length"><span>23</span> Products Found</div>
-          <hr />
-          <form className="products-sort">
-            <label htmlFor='sort'>Sort By</label>
-            <select id="sort">
-  <option value="price-lowest">price (lowest)</option>
-  <option value="price-highest" selected>price (highest)</option>
-  <option value="name-a">name (a-z)</option>
-  <option value="name-z">name (z-a)</option>
-</select>
-          </form>
         </div>
-      <div className='wrapper-products'>
-        <div className='products-left'></div>
-        <div className='products-right'></div>
+        <div className='products-right'> 
+        <CardProducts length={12} width={'300px'} />
+        </div>
       </div>
     </div>
   )

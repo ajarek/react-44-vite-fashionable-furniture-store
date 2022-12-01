@@ -1,0 +1,37 @@
+.panel{
+  width: 100%;display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.panel-input input{
+height: 40px;
+border-radius: 5px;
+padding: 0 0.5rem;
+border: 1px solid #ccc;
+background-color:#f1f5f8 ;
+}
+.panel-input input::placeholder{
+  letter-spacing: 1px;
+}
+.panel-button button{
+  font-size:2rem;
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.panel-button button:hover{
+  transform: scale(1.1);
+}
+.panel-hr hr{
+  width: 300px;
+}
+.panel-length,.label-sort{
+  font-size: 1.2rem;
+}
+.select-sort{
+  font-size: 1.2rem;
+  border: none;
+}
