@@ -7,6 +7,7 @@ import Products from './pages/Products/Products'
 import Cart from './pages/Cart/Cart'
 import Login from './pages/Login/Login'
 import Logout from './pages/Logout/Logout'
+import ProductsId from './pages/ProductsId/ProductsId'
 function App() {
   return (
     <div className='App'>
@@ -21,11 +22,19 @@ function App() {
           path='/about/'
           element={<About />}
         />
-
-        <Route
+ <Route
           path='/products/'
           element={<Products />}
         />
+        <Route
+          path='/product/'
+          element={<ProductsId />}
+        >
+          <Route
+            path={':id'}
+            element={<ProductsId />}
+          />
+        </Route>
 
         <Route
           path='/cart/'
