@@ -3,13 +3,14 @@ import ProductsPanel from '../../components/ProductsPanel/ProductsPanel'
 import CardProducts from '../../components/CardProducts/CardProducts'
 import './Products.css'
 import Button from '../../components/Button/Button'
+
 const Products = () => {
   return (
     <div className='products-root'>
       <div className='header'>
         <h1>Home / Products</h1>
       </div>
-      <ProductsPanel length={23} />
+      <ProductsPanel length={13} />
       <div className='wrapper-products'>
         <div className='products-left'>
           <h4 className='products-h4'>Category</h4>
@@ -24,13 +25,11 @@ const Products = () => {
           </div>
           <form className='panel-sort'>
             <h4 className='products-h4'>Company</h4>
-            <select className='select-sort'>
-              <option
-                value='all'
-                selected
-              >
-                all
-              </option>
+            <select
+              className='select-sort'
+              onChange={() => {}}
+            >
+              <option value='all'>all</option>
               <option value='furniture'>furniture</option>
               <option value='Ikea'>ikea</option>
               <option value='Agata'>agata</option>
@@ -38,7 +37,6 @@ const Products = () => {
           </form>
           <h4 className='products-h4'>Colors</h4>
           <div className='products-colors'>
-            
             <button className='all'>all</button>
             <button className='red'></button>
             <button className='green'></button>
@@ -46,23 +44,42 @@ const Products = () => {
             <button className='black'></button>
           </div>
           <h4 className='products-h4'>Price</h4>
-          <div className="products-price">
-            <p>$<span>300</span></p>
-            <input type="range" name="" id="" value={300} min={0} max={700} />
+          <div className='products-price'>
+            <p>
+              $<span>300</span>
+            </p>
+            <input
+              type='range'
+              name=''
+              id=''
+              value={300}
+              min={0}
+              max={700}
+              onChange={() => {}}
+            />
           </div>
-          <div className="products-shipping">
+          <div className='products-shipping'>
             <p>Free Shipping</p>
-            <input type="checkbox" name="" id="" checked/>
+            <input
+              type='checkbox'
+              name=''
+              id=''
+              
+              onChange={() => {}}
+            />
           </div>
-          <div className="clear">
+          <div className='clear'>
             <Button
-            children={'Clear Filters'}
-            path={'/'}
+              children={'Clear Filters'}
+              path={'/'}
             />
           </div>
         </div>
-        <div className='products-right'> 
-        <CardProducts length={12} width={'300px'} />
+        <div className='products-right'>
+          <CardProducts
+            length={12}
+            width={'300px'}
+          />
         </div>
       </div>
     </div>

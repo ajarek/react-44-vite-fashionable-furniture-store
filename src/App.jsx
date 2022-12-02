@@ -22,7 +22,7 @@ function App() {
           path='/about/'
           element={<About />}
         />
- <Route
+        <Route
           path='/products/'
           element={<Products />}
         />
@@ -49,7 +49,7 @@ function App() {
           element={<Logout />}
         />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

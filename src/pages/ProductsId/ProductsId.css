@@ -1,0 +1,47 @@
+.productsId-root{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.productsId-root .header{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  background-color:#eaded7 ;
+}
+.wrapper-productsId{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 1rem;
+}
+.right-productsId{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right-productsId p{
+  color: gray;
+}
+.right-productsId span{
+  color: gray;
+  font-weight: 400;
+}
+.right-productsId .counter{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-productsId .counter button{
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.right-productsId .counter .quantity{
+  font-size: 2rem;
+}
