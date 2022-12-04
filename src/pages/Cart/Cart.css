@@ -1,0 +1,21 @@
+.cart-root{
+  min-height: 80vh;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+thead{
+  border-bottom: 1px solid gray;
+  
+}
+th,
+td {
+  padding:1rem 0;
+}
+
+td img{
+  width: 20%;
+}

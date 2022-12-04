@@ -16,6 +16,15 @@ const ProductsId = () => {
   const item = isData.find((el) => el.id === id)
   const { count, setCount, increment, decrement } = useCounter(0)
 
+  const saveItem=(id,src,name,price,count) =>{
+    const localStorageData = localStorage.getItem('data')
+    let data
+    localStorageData === null? data = []: data = JSON.parse(localStorageData)
+    const newData = {id,src,name,price,count}
+    data.push(newData)
+    localStorage.setItem('data', JSON.stringify(data))
+  }
+ 
   {
     if (item) {
       return (
@@ -55,7 +64,7 @@ const ProductsId = () => {
                 <div className='quantity'>{count}</div>
                 <button onClick={increment}>➕</button>
               </div>
-              <Button path={'/cart'}>ADD TO CART</Button>
+              <Button path={'/cart'} onClick={()=>saveItem(item.id,item.src,item.name,item.price,count)}>ADD TO CART</Button>
             </div>
           </div>
         </div>
