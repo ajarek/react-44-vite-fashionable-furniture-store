@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import React, {useEffect, useState} from 'react'
 import './CardProducts.css'
-export const CardProducts = ({length,width,sortData}) => {
+export const CardProducts = ({length,width,sortData,filterData}) => {
   const [isData, setIsData]= useState([])
   useEffect(()=>{
   fetch('/data.json')
@@ -13,7 +13,7 @@ export const CardProducts = ({length,width,sortData}) => {
 })
   return (
     <div className="wrapper-featured">
-    {isData?.sort(sortData).map((el)=>{
+    {isData?.filter(filterData).sort(sortData).map((el)=>{
        if(el.id<=length)
       return(
        <div key={el.id}>

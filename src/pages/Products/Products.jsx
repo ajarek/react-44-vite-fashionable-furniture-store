@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext,useState} from 'react'
 import { AppContext } from '../../App'
 import ProductsPanel from '../../components/ProductsPanel/ProductsPanel'
 import CardProducts from '../../components/CardProducts/CardProducts'
@@ -7,6 +7,7 @@ import Button from '../../components/Button/Button'
 
 const Products = () => {
   const {selected, setSelected}= useContext(AppContext) 
+  const [filter,setFilter] = useState('Living Room')
   console.log(selected);
   if (selected==='price-lowest'){
  var sortData = (a,b)=>a.price-b.price}
@@ -16,6 +17,9 @@ const Products = () => {
  var sortData = (a,b)=>a.name-b.name}
   if (selected==='name-z'){
  var sortData = (a,b)=>b.name.localeCompare(a.name)}
+ 
+ var filterData=(a=>a.category===filter)
+
   return (
     <div className='products-root'>
       <div className='header'>
@@ -26,13 +30,13 @@ const Products = () => {
         <div className='products-left'>
           <h4 className='products-h4'>Category</h4>
           <div className='products-buttons'>
-            <button>All</button>
-            <button>Office</button>
-            <button>Living Room</button>
-            <button>Kitchen</button>
-            <button>Bedroom</button>
-            <button>Dining</button>
-            <button>Kids</button>
+            <button onClick={()=>setFilter()}>All</button>
+            <button onClick={()=>setFilter('Office')}>Office</button>
+            <button onClick={()=>setFilter('Living Room')}>Living Room</button>
+            <button onClick={()=>setFilter('Kitchen')}>Kitchen</button>
+            <button onClick={()=>setFilter('Bedroom')}>Bedroom</button>
+            <button onClick={()=>setFilter('Dining')}>Dining</button>
+            <button onClick={()=>setFilter('Kids')}>Kids</button>
           </div>
           <form className='panel-sort'>
             <h4 className='products-h4'>Company</h4>
@@ -91,6 +95,7 @@ const Products = () => {
             length={12}
             width={'300px'}
             sortData={sortData}
+            filterData={filterData}
           />
         </div>
       </div>
