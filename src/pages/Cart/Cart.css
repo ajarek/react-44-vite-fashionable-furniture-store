@@ -1,17 +1,14 @@
 .cart-root{
   min-height: 80vh;
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
   padding:0 1rem;
-=======
   border: solid;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
->>>>>>> a47a57b1574acae700b38befb6478eba4e1b646f
 }
 table {
   table-layout: fixed;
@@ -28,7 +25,6 @@ td {
 }
 
 td img{
-<<<<<<< HEAD
   width: 40%;
 }
 .tr-data{
@@ -45,7 +41,6 @@ td img{
   transform: translate(-50%, -50%) ;
   font-size: 2.5rem;
   color: red;
-=======
   width: 20%;
 }
 .empty{
@@ -70,5 +65,4 @@ td .counter button{
 }
 td .counter .quantity{
   font-size: 2rem;
->>>>>>> a47a57b1574acae700b38befb6478eba4e1b646f
 }
