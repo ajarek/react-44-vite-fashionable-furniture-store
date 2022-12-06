@@ -9,6 +9,8 @@ const Products = () => {
   const {selected, setSelected}= useContext(AppContext) 
   
   const [filter,setFilter] = useState()
+
+  const [choice,setChoice] = useState('category')
  
   if (selected==='price-lowest'){
  var sortData = (a,b)=>a.price-b.price}
@@ -19,8 +21,12 @@ const Products = () => {
   if (selected==='name-z'){
  var sortData = (a,b)=>b.name.localeCompare(a.name)}
  
+ if(choice==='category'){
  var filterData=(a=>filter?a.category===filter:a.category===a.category)
-
+ }
+ if(choice==='company'){
+ var filterData=(a=>filter?a.company===filter:a.company===a.company)
+ }
   return (
     <div className='products-root'>
       <div className='header'>
@@ -31,22 +37,19 @@ const Products = () => {
         <div className='products-left'>
           <h4 className='products-h4'>Category</h4>
           <div className='products-buttons'>
-            <button onClick={()=>setFilter(null)}>All</button>
-            <button onClick={()=>setFilter('Office')}>Office</button>
-            <button onClick={()=>setFilter('Living Room')}>Living Room</button>
-            <button onClick={()=>setFilter('Kitchen')}>Kitchen</button>
-            <button onClick={()=>setFilter('Bedroom')}>Bedroom</button>
-            <button onClick={()=>setFilter('Dining')}>Dining</button>
-            <button onClick={()=>setFilter('Kids')}>Kids</button>
+            <button onClick={()=>{setFilter(null)}}>All</button>
+            <button onClick={()=>{setFilter('Office');setChoice('category')}}>Office</button>
+            <button onClick={()=>{setFilter('Living Room');setChoice('category')}}>Living Room</button>
+            <button onClick={()=>{setFilter('Kitchen');setChoice('category')}}>Kitchen</button>
+            <button onClick={()=>{setFilter('Bedroom');setChoice('category')}}>Bedroom</button>
+            <button onClick={()=>{setFilter('Dining');setChoice('category')}}>Dining</button>
+            <button onClick={()=>{setFilter('Kids');setChoice('category')}}>Kids</button>
           </div>
           <form className='panel-sort'>
             <h4 className='products-h4'>Company</h4>
-            <select
-              className='select-sort'
-              onChange={() => {}}
-            >
-              <option value='all'>all</option>
-              <option value='furniture'>furniture</option>
+            <select className='select-sort'onChange={(e) => {setFilter(e.target.value);setChoice('company')}}>
+              <option value={null}>all</option>
+              <option value='Furniture'>furniture</option>
               <option value='Ikea'>ikea</option>
               <option value='Agata'>agata</option>
             </select>
@@ -74,16 +77,8 @@ const Products = () => {
               onChange={() => {}}
             />
           </div>
-          <div className='products-shipping'>
-            <p>Free Shipping</p>
-            <input
-              type='checkbox'
-              name=''
-              id=''
-              
-              onChange={() => {}}
-            />
-          </div>
+         
+          
           <div className='clear'>
             <Button
               children={'Clear Filters'}
