@@ -7,8 +7,9 @@ import Button from '../../components/Button/Button'
 
 const Products = () => {
   const {selected, setSelected}= useContext(AppContext) 
-  const [filter,setFilter] = useState('Living Room')
-  console.log(selected);
+  
+  const [filter,setFilter] = useState()
+ 
   if (selected==='price-lowest'){
  var sortData = (a,b)=>a.price-b.price}
   if (selected==='price-highest'){
@@ -18,7 +19,7 @@ const Products = () => {
   if (selected==='name-z'){
  var sortData = (a,b)=>b.name.localeCompare(a.name)}
  
- var filterData=(a=>a.category===filter)
+ var filterData=(a=>filter?a.category===filter:a.category===a.category)
 
   return (
     <div className='products-root'>
@@ -30,7 +31,7 @@ const Products = () => {
         <div className='products-left'>
           <h4 className='products-h4'>Category</h4>
           <div className='products-buttons'>
-            <button onClick={()=>setFilter()}>All</button>
+            <button onClick={()=>setFilter(null)}>All</button>
             <button onClick={()=>setFilter('Office')}>Office</button>
             <button onClick={()=>setFilter('Living Room')}>Living Room</button>
             <button onClick={()=>setFilter('Kitchen')}>Kitchen</button>
