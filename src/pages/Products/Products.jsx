@@ -8,7 +8,14 @@ import Button from '../../components/Button/Button'
 const Products = () => {
   const {selected, setSelected}= useContext(AppContext) 
   console.log(selected);
-  const sortData = (a,b)=>a.price-b.price
+  if (selected==='price-lowest'){
+ var sortData = (a,b)=>a.price-b.price}
+  if (selected==='price-highest'){
+ var sortData = (a,b)=>b.price-a.price}
+  if (selected==='name-a'){
+ var sortData = (a,b)=>a.name-b.name}
+  if (selected==='name-z'){
+ var sortData = (a,b)=>b.name.localeCompare(a.name)}
   return (
     <div className='products-root'>
       <div className='header'>
