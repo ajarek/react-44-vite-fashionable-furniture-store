@@ -14,7 +14,7 @@ const ProductsId = () => {
   })
   const { id } = useParams()
   const item = isData.find((el) => el.id === id)
-  const { count, setCount, increment, decrement } = useCounter(0)
+  const { count, setCount, increment, decrement } = useCounter(1)
 
   const saveItem=(id,src,name,price,count) =>{
     const localStorageData = localStorage.getItem('data')

@@ -1,16 +1,20 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { AppContext } from '../../App'
 import ProductsPanel from '../../components/ProductsPanel/ProductsPanel'
 import CardProducts from '../../components/CardProducts/CardProducts'
 import './Products.css'
 import Button from '../../components/Button/Button'
 
 const Products = () => {
+  const {selected, setSelected}= useContext(AppContext) 
+  console.log(selected);
+  const sortData = (a,b)=>a.price-b.price
   return (
     <div className='products-root'>
       <div className='header'>
         <h1>Home / Products</h1>
       </div>
-      <ProductsPanel length={13} />
+      <ProductsPanel length={13}/>
       <div className='wrapper-products'>
         <div className='products-left'>
           <h4 className='products-h4'>Category</h4>
@@ -79,6 +83,7 @@ const Products = () => {
           <CardProducts
             length={12}
             width={'300px'}
+            sortData={sortData}
           />
         </div>
       </div>

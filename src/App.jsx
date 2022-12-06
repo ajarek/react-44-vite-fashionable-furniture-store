@@ -1,3 +1,4 @@
+import { useState, createContext } from 'react'
 import Navigation from './components/Navigation/Navigation'
 import Footer from './components/Footer/Footer'
 import { Routes, Route } from 'react-router-dom'
@@ -8,9 +9,12 @@ import Cart from './pages/Cart/Cart'
 import Login from './pages/Login/Login'
 import Logout from './pages/Logout/Logout'
 import ProductsId from './pages/ProductsId/ProductsId'
+export const AppContext = createContext()
 function App() {
+  const [selected, setSelected] = useState('price-lowest');
   return (
     <div className='App'>
+      <AppContext.Provider value={{selected, setSelected}}>
       <Navigation />
 
       <Routes>
@@ -50,6 +54,7 @@ function App() {
         />
       </Routes>
       <Footer />
+      </AppContext.Provider>
     </div>
   )
 }

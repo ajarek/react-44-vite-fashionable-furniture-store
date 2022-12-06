@@ -1,7 +1,18 @@
-import React from 'react'
+import React,{useState,useContext} from 'react'
 import './ProductsPanel.css'
-
+import { AppContext } from '../../App'
 const ProductsPanel = ({ length }) => {
+  const options=[
+    {value:'price-lowest',text:'Price (lowest)'},
+    {value:'price-highest',text:'Price (highest)'},
+    {value:'name-a',text:'(a-z)'},
+    {value:'name-z',text:'(z-a)'},
+  ]
+  const {selected, setSelected}= useContext(AppContext)
+  const handleChange = event => {
+    // console.log(event.target.value);
+    setSelected(event.target.value);
+  };
   return (
     <div className='panel'>
       <div className='panel-input'>
@@ -24,25 +35,23 @@ const ProductsPanel = ({ length }) => {
         {' '}
         <hr />
       </div>
-      <form className='panel-sort'>
+      
         <label
           className='label-sort'
           htmlFor='label-sort'
         >
           Sort By{' '}
         </label>
-        <select className='select-sort'>
-          <option value='price-lowest'>Price (lowest)</option>
-          <option
-            value='price-highest'
-            
-          >
-            Price (highest)
+        
+
+          <select className='select-sort' value={selected} onChange={handleChange}>
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.text}
           </option>
-          <option value='name-a'>Name (a-z)</option>
-          <option value='name-z'>Name (z-a)</option>
-        </select>
-      </form>
+        ))}
+      </select>
+      
     </div>
   )
 }
