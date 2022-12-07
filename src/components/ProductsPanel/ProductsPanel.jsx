@@ -1,7 +1,7 @@
 import React,{useState,useContext} from 'react'
 import './ProductsPanel.css'
 import { AppContext } from '../../App'
-const ProductsPanel = ({ length }) => {
+const ProductsPanel = () => {
   const options=[
     {value:'price-lowest',text:'Price (lowest)'},
     {value:'price-highest',text:'Price (highest)'},
@@ -15,22 +15,10 @@ const ProductsPanel = ({ length }) => {
   };
   return (
     <div className='panel'>
-      <div className='panel-input'>
-        <input
-          type='search'
-          name=''
-          id=''
-          placeholder='Search'
-        />
-      </div>
+    
 
-      <div className='panel-button'>
-        <button>🪟</button>
-        <button>📰</button>
-      </div>
-      <div className='panel-length'>
-        <span>{length}</span> Products Found
-      </div>
+      
+      
       <div className='panel-hr'>
         {' '}
         <hr />
