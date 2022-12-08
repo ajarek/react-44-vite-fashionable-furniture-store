@@ -11,6 +11,7 @@ const Products = () => {
   const [filter, setFilter] = useState()
 
   const [choice, setChoice] = useState('category')
+  const [range, setRange] = useState('800')
 
   if (selected === 'price-lowest') {
     var sortData = (a, b) => a.price - b.price
@@ -32,6 +33,10 @@ const Products = () => {
   if (choice === 'company') {
     var filterData = (a) =>
       filter ? a.company === filter : a.company === a.company
+  }
+  if (choice === 'price') {
+    var filterData = (a) =>
+    range? a.price < range:[] 
   }
   return (
     <div className='products-root'>
@@ -117,25 +122,20 @@ const Products = () => {
           <h4 className='products-h4'>Price</h4>
           <div className='products-price'>
             <p>
-              $<span>300</span>
+              $<span>{range}</span>
             </p>
             <input
               type='range'
               name=''
               id=''
-              value={300}
-              min={0}
-              max={700}
-              onChange={() => {}}
+              value={range}
+              min={280}
+              max={800}
+              onChange={(e) => {setRange(e.target.value); setChoice('price')}}
             />
           </div>
 
-          <div className='clear'>
-            <Button
-              children={'Clear Filters'}
-              path={'/'}
-            />
-          </div>
+          
         </div>
         <div className='products-right'>
           <CardProducts
