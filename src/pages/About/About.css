@@ -18,8 +18,7 @@
   place-items: center;
   padding: 2rem;
 }
-.about-root .wrapper-about .about-left{
-}
+
 .about-root .wrapper-about .about-right{
   display: flex;
   flex-direction: column;
@@ -31,4 +30,16 @@
 .about-root .wrapper-about .about-right p{
 line-height: 2;
 color: gray;
+}
+@media (max-width:1000px) {
+  .about-root .wrapper-about{
+  grid-template-columns: repeat(1,1fr);
+  }
+  .about-root .wrapper-about .about-right{
+    padding: 0rem;
+  }
+  .about-left img{
+    width: 100%;
+
+  }
 }

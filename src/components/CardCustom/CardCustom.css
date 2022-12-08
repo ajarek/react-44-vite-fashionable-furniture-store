@@ -21,3 +21,9 @@
 text-align: center;
 line-height: 2;
 }
+@media (max-width:1000px) {
+  .card-custom{
+    width: 100%;
+    height: auto;
+  }
+}

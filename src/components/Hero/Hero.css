@@ -22,3 +22,13 @@
   color: #353535;
   
 }
+@media (max-width:1000px) {
+  .hero{
+    
+    grid-template-columns: 1fr ;
+    max-height: 100%;
+  }
+  .right-div img{
+    width: 100%;
+  }
+  }

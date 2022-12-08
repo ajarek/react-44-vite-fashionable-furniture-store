@@ -1,5 +1,6 @@
 .root-custom{
   background-image: linear-gradient(to bottom ,#eaded7  66%,transparent 34% );
+  padding: 1rem;
 }
 .header-custom{
 width: 100%;
@@ -20,3 +21,23 @@ padding: 1rem;
   grid-template-columns: repeat(3,1fr);
   place-items: center;
 }
+@media (max-width:1000px) {
+  .body-custom{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+    }
+    .root-custom{
+      background-image:none;
+      background-color:#eaded7 ;
+      
+    }
+    .header-custom{
+     
+      flex-direction: column;
+
+}
+.header-custom .text{
+  width: 100%;
+}
+
+  }

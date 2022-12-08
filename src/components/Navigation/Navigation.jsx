@@ -45,21 +45,7 @@ const Navigation = () => {
         >
           Cart 🛒
         </NavLink>
-        {isLogin ? (
-          <NavLink
-            className={'link'}
-            to='/logout'
-          >
-            Logout 🔓
-          </NavLink>
-        ) : (
-          <NavLink
-            className={'link'}
-            to='/login'
-          >
-           Login 🔒 
-          </NavLink>
-        )}
+       
       </ul>
       <div className='hamburger'>
         <Hamburger

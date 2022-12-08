@@ -44,3 +44,13 @@
 .newsletter .content .contact-form .submit-btn:hover{
   background-color:#ca7c52 ;
 }
+@media (max-width:1000px) {
+  .newsletter .content{
+   
+    grid-template-columns: repeat(1,1fr);
+    
+  }
+  .newsletter .content .contact-form input{
+    width: 100%;
+  }
+}

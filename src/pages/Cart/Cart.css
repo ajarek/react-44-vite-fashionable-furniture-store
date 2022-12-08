@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding:0 1rem;
-  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,7 +24,7 @@ td {
 }
 
 td img{
-  width: 40%;
+  width: 100%;
 }
 .tr-data{
   
@@ -51,18 +50,13 @@ td img{
   color: red;
   font-size: 2.5rem;
 }
-td .counter{
-  width: 20%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (max-width:1000px) {
+  .cart-root{
+    padding: 0.2rem;
+  }
+  th,
+td {
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
 }
-td .counter button{
-  border: none;
-  background-color: transparent;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-td .counter .quantity{
-  font-size: 2rem;
 }

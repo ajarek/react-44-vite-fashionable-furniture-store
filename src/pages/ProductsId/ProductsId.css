@@ -45,3 +45,11 @@
 .right-productsId .counter .quantity{
   font-size: 2rem;
 }
+@media (max-width:1000px) {
+  .wrapper-productsId{
+    grid-template-columns:  1fr;
+  }
+  .left-productsId img{
+  width: 100%;
+  }
+}

@@ -48,3 +48,11 @@
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
+@media (max-width:1000px) {
+  .products-root .wrapper-products{
+    grid-template-columns: 1fr ;
+    padding: 0 1rem;
+  }
+}
+  
+
